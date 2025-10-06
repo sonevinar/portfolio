@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "portfolio": "Portfolio",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "brand": "Kevin Barros / Sonevinar",
+  "hero": {
+    "role": "Diseñador UX/UI",
+    "hello": "Hola, soy",
+    "tagline": "Creo experiencias digitales mágicas que conectan, inspiran y resuelven problemas reales a través del diseño.",
+    "skills": {
+      "research": "Research",
+      "prototyping": "Prototyping",
+      "designSystems": "Design Systems",
+      "userTesting": "User Testing"
+    },
+    "ctaWork": "Ver mi trabajo",
+    "ctaCV": "Descargar CV",
+    "alt": "Kevin Barros - Diseñadora UX"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "intro": "Soy un diseñador UX/UI apasionado con más de 5 años de experiencia creando experiencias digitales que marcan la diferencia. Mi enfoque combina investigación profunda del usuario con diseño visual impactante y storytelling emocional.",
+    "story": {
+      "title": "Mi Historia",
+      "p1": "Mi viaje en el diseño UX comenzó hace 5 años cuando me di cuenta de que la tecnología más poderosa es aquella que las personas pueden usar intuitivamente. Desde entonces, he trabajado con startups y empresas establecidas para crear productos digitales que realmente importan.",
+      "p2": "Mi enfoque se basa en la investigación profunda del usuario, la iteración constante y la colaboración estrecha con equipos de desarrollo. Creo que el mejor diseño es invisible: funciona tan bien que los usuarios ni siquiera lo notan.",
+      "p3": "Cuando no estoy diseñando, me encontrarás explorando nuevas metodologías de UX, leyendo sobre psicología del comportamiento, o experimentando con nuevas herramientas de prototipado."
+    },
+    "certs": "Certificaciones",
+    "skillsTitle": "Habilidades Técnicas",
+    "principles": "Mis Principios de Diseño",
+    "values": {
+      "userCentric": {
+        "title": "Centrado en el Usuario",
+        "desc": "Cada decisión de diseño se basa en las necesidades reales de los usuarios."
+      },
+      "innovation": {
+        "title": "Innovación",
+        "desc": "Busco constantemente nuevas formas de resolver problemas complejos."
+      },
+      "goalOriented": {
+        "title": "Orientado a Objetivos",
+        "desc": "Diseño con propósito, siempre alineado con los objetivos del negocio."
+      },
+      "rapidIteration": {
+        "title": "Iteración Rápida",
+        "desc": "Prototipo rápido, pruebo temprano y mejoro continuamente."
+      }
+    }
+  }
+  ,
+  "portfolio": {
+    "title": "Mi Portfolio",
+    "intro": "Aquí encontrarás algunos de mis proyectos más destacados, desde aplicaciones móviles hasta plataformas web complejas. Cada proyecto cuenta una historia única de innovación y diseño centrado en el usuario.",
+    "buttons": {
+      "caseStudy": "Ver Caso de Estudio",
+      "demo": "Demo",
+      "viewAll": "Ver todos los proyectos"
+    },
+    "projects": {
+      "ecobank": {
+        "title": "EcoBank - Banking App",
+        "description": "Rediseño completo de una aplicación bancaria móvil centrada en la sostenibilidad y experiencia del usuario.",
+        "tags": ["Mobile Design", "Fintech", "User Research"]
+      },
+      "healthcare": {
+        "title": "HealthCare Dashboard",
+        "description": "Dashboard para profesionales de la salud que permite gestionar pacientes y citas de manera eficiente.",
+        "tags": ["Web Design", "Healthcare", "Data Visualization"]
+      },
+      "foodieshare": {
+        "title": "FoodieShare - Plataforma Social",
+        "description": "Plataforma social para amantes de la comida donde pueden compartir recetas y experiencias culinarias.",
+        "tags": ["Social Media", "Mobile First", "Community"]
+      },
+      "edulearn": {
+        "title": "EduLearn - Plataforma E-learning",
+        "description": "Plataforma de aprendizaje en línea con enfoque en la gamificación y engagement del estudiante.",
+        "tags": ["Education", "Gamification", "Web Design"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Trabajemos Juntos",
+    "intro": "¿Tienes un proyecto en mente? Me encantaría conocer más sobre tu idea y cómo puedo ayudarte a crear una experiencia excepcional que impacte a tus usuarios.",
+    "cards": {
+      "email": { "title": "Email", "button": "Enviar email" },
+      "phone": { "title": "Teléfono", "button": "Llamar" },
+      "location": { "title": "Ubicación", "place": "Palma de Mallorca, España", "remote": "Disponibilidad en remoto" },
+      "social": { "title": "Redes Sociales", "cv": "Descargar CV" }
+    },
+    "form": {
+      "title": "Envíame un mensaje",
+      "description": "Completa el formulario y te responderé en menos de 24 horas.",
+      "labels": {
+        "name": "Nombre",
+        "email": "Email",
+        "subject": "Asunto",
+        "message": "Mensaje"
+      },
+      "placeholders": {
+        "name": "Tu nombre",
+        "email": "tu@email.com",
+        "subject": "¿En qué puedo ayudarte?",
+        "message": "Cuéntame más sobre tu proyecto..."
+      },
+      "submit": "Enviar mensaje"
+    }
+  },
+  "footer": {
+    "bioTitle": "Kevin Barros",
+    "bio": "Diseñador UX/UI apasionado por crear experiencias digitales que conectan con las personas y transforman ideas en realidad.",
+    "quickLinks": "Enlaces rápidos",
+    "services": "Servicios",
+    "servicesList": ["Investigación UX", "Diseño UI", "Prototipado", "Testing de Usabilidad", "Design Systems"],
+    "copyright": {
+      "madeWith": "Hecho con",
+      "and": "y mucha ilusión."
+    },
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Uso",
+    "backToTop": "Volver arriba ↑"
+  }
+}
+
+

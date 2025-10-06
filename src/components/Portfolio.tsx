@@ -3,43 +3,45 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useTranslation } from "react-i18next";
 
 const projects = [
   {
-    title: "EcoBank - Banking App",
-    description: "Rediseño completo de una aplicación bancaria móvil centrada en la sostenibilidad y experiencia del usuario.",
+    titleKey: "portfolio.projects.ecobank.title",
+    descriptionKey: "portfolio.projects.ecobank.description",
     image: "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzU5Mzg5MDMwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Mobile Design", "Fintech", "User Research"],
+    tagsKey: "portfolio.projects.ecobank.tags",
     liveUrl: "#",
     caseStudyUrl: "#"
   },
   {
-    title: "HealthCare Dashboard",
-    description: "Dashboard para profesionales de la salud que permite gestionar pacientes y citas de manera eficiente.",
+    titleKey: "portfolio.projects.healthcare.title",
+    descriptionKey: "portfolio.projects.healthcare.description",
     image: "https://images.unsplash.com/photo-1657812159077-90649115008c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU5NDAwNzg3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Web Design", "Healthcare", "Data Visualization"],
+    tagsKey: "portfolio.projects.healthcare.tags",
     liveUrl: "#",
     caseStudyUrl: "#"
   },
   {
-    title: "FoodieShare - Social Platform",
-    description: "Plataforma social para amantes de la comida donde pueden compartir recetas y experiencias culinarias.",
+    titleKey: "portfolio.projects.foodieshare.title",
+    descriptionKey: "portfolio.projects.foodieshare.description",
     image: "https://images.unsplash.com/photo-1558655146-d09347e92766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2VyJTIwaW50ZXJmYWNlJTIwZGVzaWdufGVufDF8fHx8MTc1OTQxNTA3MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Social Media", "Mobile First", "Community"],
+    tagsKey: "portfolio.projects.foodieshare.tags",
     liveUrl: "#",
     caseStudyUrl: "#"
   },
   {
-    title: "EduLearn - E-learning Platform",
-    description: "Plataforma de aprendizaje en línea con enfoque en la gamificación y engagement del estudiante.",
+    titleKey: "portfolio.projects.edulearn.title",
+    descriptionKey: "portfolio.projects.edulearn.description",
     image: "https://images.unsplash.com/photo-1629494893504-d41e26a02631?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1eCUyMGRlc2lnbiUyMG1vY2t1cHxlbnwxfHx8fDE3NTk0OTk0Njl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Education", "Gamification", "Web Design"],
+    tagsKey: "portfolio.projects.edulearn.tags",
     liveUrl: "#",
     caseStudyUrl: "#"
   }
 ];
 
 export function Portfolio() {
+  const { t } = useTranslation();
   return (
     <section id="portfolio" className="relative py-20 overflow-hidden">
       {/* Background effects */}
@@ -51,11 +53,10 @@ export function Portfolio() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Mi Portfolio
+            {t('portfolio.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Aquí encontrarás algunos de mis proyectos más destacados, desde aplicaciones móviles 
-            hasta plataformas web complejas. Cada proyecto cuenta una historia única de innovación y diseño centrado en el usuario.
+            {t('portfolio.intro')}
           </p>
         </div>
 
@@ -65,7 +66,7 @@ export function Portfolio() {
               <div className="relative overflow-hidden">
                 <ImageWithFallback
                   src={project.image}
-                  alt={project.title}
+                  alt={t(project.titleKey)}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -74,7 +75,7 @@ export function Portfolio() {
               
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                  <CardTitle className="text-xl">{t(project.titleKey)}</CardTitle>
                   <div className="flex gap-2">
                     <Button variant="ghost" size="icon" className="h-8 w-8">
                       <ExternalLink className="h-4 w-4" />
@@ -85,13 +86,13 @@ export function Portfolio() {
                   </div>
                 </div>
                 <CardDescription className="text-sm">
-                  {project.description}
+                  {t(project.descriptionKey)}
                 </CardDescription>
               </CardHeader>
 
               <CardContent className="pt-0">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, tagIndex) => (
+                  {(t(project.tagsKey, { returnObjects: true }) as string[]).map((tag, tagIndex) => (
                     <Badge 
                       key={tagIndex} 
                       variant="secondary" 
@@ -106,14 +107,14 @@ export function Portfolio() {
                     size="sm" 
                     className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 glow transform hover:scale-105 transition-all duration-300"
                   >
-                    Ver Caso de Estudio
+                    {t('portfolio.buttons.caseStudy')}
                   </Button>
                   <Button 
                     variant="outline" 
                     size="sm"
                     className="border-accent/50 hover:bg-accent/10 hover:glow-purple transform hover:scale-105 transition-all duration-300"
                   >
-                    Demo
+                    {t('portfolio.buttons.demo')}
                   </Button>
                 </div>
               </CardContent>
@@ -123,7 +124,7 @@ export function Portfolio() {
 
         <div className="text-center mt-12">
           <Button variant="outline" size="lg">
-            Ver todos los proyectos
+            {t('portfolio.buttons.viewAll')}
           </Button>
         </div>
       </div>

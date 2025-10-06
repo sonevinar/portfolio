@@ -15,8 +15,10 @@ import {
   Send
 } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -49,11 +51,10 @@ export function Contact() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Trabajemos Juntos
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            ¿Tienes un proyecto en mente? Me encantaría conocer más sobre tu idea 
-            y cómo puedo ayudarte a crear una experiencia excepcional que impacte a tus usuarios.
+            {t('contact.intro')}
           </p>
         </div>
 
@@ -64,7 +65,7 @@ export function Contact() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 group-hover:text-primary transition-colors duration-300">
                   <Mail className="h-5 w-5 group-hover:glow transition-all duration-300" />
-                  Email
+                  {t('contact.cards.email.title')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -74,7 +75,7 @@ export function Contact() {
                   size="sm" 
                   className="mt-2 border-accent/50 hover:bg-accent/10 hover:glow-purple transform hover:scale-105 transition-all duration-300"
                 >
-                  Enviar email
+                  {t('contact.cards.email.button')}
                 </Button>
               </CardContent>
             </Card>
@@ -83,13 +84,13 @@ export function Contact() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Phone className="h-5 w-5" />
-                  Teléfono
+                  {t('contact.cards.phone.title')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">+34 623 042 922</p>
                 <Button variant="outline" size="sm" className="mt-2">
-                  Llamar
+                  {t('contact.cards.phone.button')}
                 </Button>
               </CardContent>
             </Card>
@@ -98,20 +99,20 @@ export function Contact() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MapPin className="h-5 w-5" />
-                  Ubicación
+                  {t('contact.cards.location.title')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Palma de Mallorca, España</p>
+                <p className="text-muted-foreground">{t('contact.cards.location.place')}</p>
                 <Badge variant="secondary" className="mt-2">
-                  Disponibilidad en remoto
+                  {t('contact.cards.location.remote')}
                 </Badge>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle>Redes Sociales</CardTitle>
+                <CardTitle>{t('contact.cards.social.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex gap-3">
@@ -124,7 +125,7 @@ export function Contact() {
                 </div>
                 <Button variant="outline" size="sm" className="w-full mt-4">
                   <Download className="mr-2 h-4 w-4" />
-                  Descargar CV
+                  {t('contact.cards.social.cv')}
                 </Button>
               </CardContent>
             </Card>
@@ -135,33 +136,33 @@ export function Contact() {
             <Card className="bg-card/30 backdrop-blur-sm border border-white/10 hover:border-primary/50 hover:glow transition-all duration-500">
               <CardHeader>
                 <CardTitle className="text-2xl bg-gradient-to-r from-white to-primary bg-clip-text text-transparent">
-                  Envíame un mensaje
+                  {t('contact.form.title')}
                 </CardTitle>
                 <CardDescription className="text-gray-300">
-                  Completa el formulario y te responderé en menos de 24 horas.
+                  {t('contact.form.description')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Nombre</Label>
+                      <Label htmlFor="name">{t('contact.form.labels.name')}</Label>
                       <Input
                         id="name"
                         name="name"
-                        placeholder="Tu nombre"
+                        placeholder={t('contact.form.placeholders.name')}
                         value={formData.name}
                         onChange={handleInputChange}
                         required
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">{t('contact.form.labels.email')}</Label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="tu@email.com"
+                        placeholder={t('contact.form.placeholders.email')}
                         value={formData.email}
                         onChange={handleInputChange}
                         required
@@ -170,11 +171,11 @@ export function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Asunto</Label>
+                    <Label htmlFor="subject">{t('contact.form.labels.subject')}</Label>
                     <Input
                       id="subject"
                       name="subject"
-                      placeholder="¿En qué puedo ayudarte?"
+                      placeholder={t('contact.form.placeholders.subject')}
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
@@ -182,11 +183,11 @@ export function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Mensaje</Label>
+                    <Label htmlFor="message">{t('contact.form.labels.message')}</Label>
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Cuéntame más sobre tu proyecto..."
+                      placeholder={t('contact.form.placeholders.message')}
                       className="min-h-[120px]"
                       value={formData.message}
                       onChange={handleInputChange}
@@ -200,7 +201,7 @@ export function Contact() {
                     className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 glow transform hover:scale-105 transition-all duration-300"
                   >
                     <Send className="mr-2 h-4 w-4" />
-                    Enviar mensaje
+                    {t('contact.form.submit')}
                   </Button>
                 </form>
               </CardContent>

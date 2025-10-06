@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "brand": "Kevin Barros / Sonevinar",
+  "hero": {
+    "role": "UX/UI Designer",
+    "hello": "Hi, I'm",
+    "tagline": "I craft digital experiences that connect, inspire, and solve real problems through design.",
+    "skills": {
+      "research": "Research",
+      "prototyping": "Prototyping",
+      "designSystems": "Design Systems",
+      "userTesting": "User Testing"
+    },
+    "ctaWork": "See my work",
+    "ctaCV": "Download CV",
+    "alt": "Kevin Barros - UX Designer"
+  },
+  "about": {
+    "title": "About me",
+    "intro": "I'm a passionate UX/UI designer with 5+ years of experience creating digital experiences that make a difference. My approach combines deep user research with impactful visual design and emotional storytelling.",
+    "story": {
+      "title": "My Story",
+      "p1": "My journey in UX design began 5 years ago when I realized that the most powerful technology is the one people can intuitively use. Since then, I've worked with startups and established companies to create digital products that truly matter.",
+      "p2": "My approach is based on deep user research, constant iteration, and close collaboration with development teams. I believe the best design is invisible: it works so well that users don't even notice it.",
+      "p3": "When I'm not designing, you'll find me exploring new UX methodologies, reading about behavioral psychology, or experimenting with new prototyping tools."
+    },
+    "certs": "Certifications",
+    "skillsTitle": "Technical Skills",
+    "principles": "My Design Principles",
+    "values": {
+      "userCentric": {
+        "title": "User-Centered",
+        "desc": "Every design decision is based on real user needs."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "I constantly seek new ways to solve complex problems."
+      },
+      "goalOriented": {
+        "title": "Goal-Oriented",
+        "desc": "I design with purpose, always aligned with business goals."
+      },
+      "rapidIteration": {
+        "title": "Rapid Iteration",
+        "desc": "I prototype quickly, test early, and improve continuously."
+      }
+    }
+  }
+  ,
+  "portfolio": {
+    "title": "My Portfolio",
+    "intro": "Here you'll find some of my featured projects, from mobile apps to complex web platforms. Each project tells a unique story of innovation and user-centered design.",
+    "buttons": {
+      "caseStudy": "View Case Study",
+      "demo": "Demo",
+      "viewAll": "View all projects"
+    },
+    "projects": {
+      "ecobank": {
+        "title": "EcoBank - Banking App",
+        "description": "Complete redesign of a mobile banking app focused on sustainability and user experience.",
+        "tags": ["Mobile Design", "Fintech", "User Research"]
+      },
+      "healthcare": {
+        "title": "HealthCare Dashboard",
+        "description": "Dashboard for healthcare professionals to efficiently manage patients and appointments.",
+        "tags": ["Web Design", "Healthcare", "Data Visualization"]
+      },
+      "foodieshare": {
+        "title": "FoodieShare - Social Platform",
+        "description": "Social platform for food lovers to share recipes and culinary experiences.",
+        "tags": ["Social Media", "Mobile First", "Community"]
+      },
+      "edulearn": {
+        "title": "EduLearn - E-learning Platform",
+        "description": "Online learning platform focused on gamification and student engagement.",
+        "tags": ["Education", "Gamification", "Web Design"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "intro": "Do you have a project in mind? I'd love to learn more about your idea and how I can help you create an exceptional experience that impacts your users.",
+    "cards": {
+      "email": { "title": "Email", "button": "Send email" },
+      "phone": { "title": "Phone", "button": "Call" },
+      "location": { "title": "Location", "place": "Palma de Mallorca, Spain", "remote": "Remote availability" },
+      "social": { "title": "Social Media", "cv": "Download CV" }
+    },
+    "form": {
+      "title": "Send me a message",
+      "description": "Fill out the form and I'll get back to you in under 24 hours.",
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "Your name",
+        "email": "your@email.com",
+        "subject": "How can I help you?",
+        "message": "Tell me more about your project..."
+      },
+      "submit": "Send message"
+    }
+  },
+  "footer": {
+    "bioTitle": "Kevin Barros",
+    "bio": "UX/UI designer passionate about creating digital experiences that connect with people and turn ideas into reality.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "servicesList": ["UX Research", "UI Design", "Prototyping", "Usability Testing", "Design Systems"],
+    "copyright": {
+      "madeWith": "Made with",
+      "and": "and a lot of passion."
+    },
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "backToTop": "Back to top ↑"
+  }
+}
+
+

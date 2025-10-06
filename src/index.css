@@ -3046,3 +3046,20 @@ html {
     transform: none;
   }
 }
+
+/* Global cursor for clickable elements */
+@layer base {
+  button,
+  [type="button"],
+  [type="submit"],
+  a,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [type="button"][disabled],
+  [type="submit"][disabled] {
+    cursor: not-allowed;
+  }
+}

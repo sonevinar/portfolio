@@ -2,8 +2,10 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { ArrowDown, Download, Github, Linkedin, Mail, Sparkles, Palette } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useTranslation } from "react-i18next";
 
 export function Hero() {
+  const { t } = useTranslation();
   const scrollToPortfolio = () => {
     const element = document.getElementById('portfolio');
     if (element) {
@@ -26,33 +28,31 @@ export function Hero() {
             <div className="space-y-6">
               <Badge variant="secondary" className="w-fit glow-purple border border-accent/30 bg-gradient-to-r from-primary/20 to-accent/20 text-inherit">
                 <Sparkles className="w-3 h-3 mr-1" />
-                Diseñador UX/UI
+                {t('hero.role')}
               </Badge>
               <h1 className="text-4xl md:text-7xl font-bold leading-tight">
-                Hola, soy{" "}
+                {t('hero.hello')}{" "}
                 <span className="bg-gradient-to-r from-primary via-accent to-pink-500 bg-clip-text text-transparent animate-pulse">
                   Kevin
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-lg leading-relaxed">
-                Creo experiencias digitales 
-                <span className="text-accent font-semibold"> mágicas </span>
-                que conectan, inspiran y resuelven problemas reales a través del diseño.
+                {t('hero.tagline')}
               </p>
             </div>
 
             <div className="flex flex-wrap gap-3">
               <Badge variant="outline" className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-400/30 hover:glow transition-all duration-300">
-                Research
+                {t('hero.skills.research')}
               </Badge>
               <Badge variant="outline" className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30 hover:glow-purple transition-all duration-300">
-                Prototyping
+                {t('hero.skills.prototyping')}
               </Badge>
               <Badge variant="outline" className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-green-400/30 hover:glow transition-all duration-300">
-                Design Systems
+                {t('hero.skills.designSystems')}
               </Badge>
               <Badge variant="outline" className="bg-gradient-to-r from-orange-500/20 to-red-500/20 border-orange-400/30 hover:glow-pink transition-all duration-300">
-                User Testing
+                {t('hero.skills.userTesting')}
               </Badge>
             </div>
 
@@ -62,7 +62,7 @@ export function Hero() {
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 glow transform hover:scale-105 transition-all duration-300"
               >
-                Ver mi trabajo
+                {t('hero.ctaWork')}
                 <ArrowDown className="ml-2 h-4 w-4 animate-bounce" />
               </Button>
               <Button 
@@ -71,7 +71,7 @@ export function Hero() {
                 className="border-accent/50 hover:bg-accent/10 hover:glow-purple transform hover:scale-105 transition-all duration-300"
               >
                 <Download className="mr-2 h-4 w-4" />
-                Descargar CV
+                {t('hero.ctaCV')}
               </Button>
             </div>
 
@@ -94,8 +94,8 @@ export function Hero() {
               <div className="relative w-80 h-80 rounded-full bg-gradient-to-br from-primary via-accent to-pink-500 p-1 glow-purple pulse-glow">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-purple-900/50 to-blue-900/50 flex items-center justify-center">
                   <ImageWithFallback
-                    src="https://media.licdn.com/dms/image/v2/D4D03AQE8I1PHosWenw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1708524647842?e=2147483647&v=beta&t=g24SUbZ--FqTDT2zmGUHV8rcWQKLpsrFRQEWOA6fOBI"
-                    alt="Kevin Barros - Diseñadora UX"
+                    src="https://media.licdn.com/dms/image/v2/D4D03AQE8I1PHosWenw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708524647842?e=1762387200&v=beta&t=hi6Zp-hTKjaHWfVqpnVRDnqsSEG4wH2ZPTbBEH-LneY"
+                    alt={t('hero.alt')}
                     className="w-72 h-72 rounded-full object-cover shadow-2xl"
                   />
                 </div>
